@@ -157,11 +157,12 @@ async def confirm_send_admin(call: CallbackQuery, state: FSMContext):
                         count += 1
                     await asyncio.sleep(0.1)
             finally:
-                await bot_send_message(user_id,
-                                       f'Рассылка закончена\n'
-                                       f'Количество пользователей '
-                                       f'получивших рассылку: {count}\n'
-                                       )
+                await bot_send_message(
+                    user_id,
+                    f'Рассылка закончена\n'
+                    f'Количество пользователей '
+                    f'получивших рассылку: {count}\n'
+                    )
         else:
             await bot_send_message(
                 user_id,
